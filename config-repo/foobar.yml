@@ -1,2 +1,22 @@
-foo: foo test
+security:
+  user.password: password
+zuul:
+  routes:
+    resource:
+      path: /resource/**
+      url: http://localhost:9000
+      stripPrefix: true
+    uploader:
+      path: /upload**
+      url: http://localhost:9001
+      stripPrefix: false
+    elasticsearch:
+      path: /elasticsearch/**
+      url: http://localhost:9200
+      stripPrefix: true
+    mailstore:
+          path: /mailstore/**
+          url: http://localhost:9100
+          stripPrefix: true
+
 server.port: 8080
