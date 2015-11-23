@@ -20,3 +20,12 @@ zuul:
           stripPrefix: true
 
 server.port: 8080
+
+hibernate:
+  dialect: org.hibernate.dialect.MySQL5Dialect
+  show_sql: true
+  format_sql: true
+  hbm2ddl.auto: update
+
+logging:
+  level.org.hibernate.SQL: debug
