@@ -29,7 +29,26 @@ hibernate:
 
 logging:
   level.org.hibernate.SQL: debug
+  
+#Lpc add
+spring:
+  application:
+     name: web
+  autoconfigure:
+     exclude: org.springframework.cloud.netflix.servo.ServoMetricsAutoConfiguration
+  datasource:
+    url: jdbc:mysql://localhost:3306/hansight-saas
+    username: saas
+    password: changeme
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+  thymeleaf:
+    cache: false
+    prefix: file:saas/
 
+#security.basic.enabled: false
 netflix:
   atlas:
     uri: http://localhost:7101/api/v1/publish
