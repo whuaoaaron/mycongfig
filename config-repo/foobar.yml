@@ -34,7 +34,7 @@ download:
   root: downloads
   rsyslog_script: ../agent/rsyslog-agent/build.sh
 
-management.security.role: SUPERUSER
+#management.security.role: SUPERUSER
 
 #endpoints.health.sensitive: false
 
