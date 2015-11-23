@@ -29,6 +29,10 @@ hibernate:
 
 logging:
   level.org.hibernate.SQL: debug
+
+download:
+  root: downloads
+  rsyslog_script: ../agent/rsyslog-agent/build.sh
   
 #Lpc add
 spring:
